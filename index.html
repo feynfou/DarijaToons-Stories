@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DarijaToons — Stories / دارجاتونز — الحكايات</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      /* background: #fff; */
+       /* background: linear-gradient(to bottom, #fffbf0, #d0f0ff); */
+       background: url('images/clouds-pattern.webp') no-repeat center center fixed;
+       
+
+  background-size: cover;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    #app { text-align: center; width: 100%; max-width: 700px; }
+
+    h1 { font-size: 1.6rem; margin-bottom: 1rem; }
+
+    /* Home button styling */
+    .home-button {
+      display: inline-block;
+      background: #60a5fa;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 15px;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .home-button:hover { 
+      transform: scale(1.05);
+      background: #3b82f6;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 15px; margin-top: 20px; }
+
+    .card {
+      border-radius: 20px;
+      padding: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Gradient colors for each story card */
+    .card[data-card="mozart"] { background: linear-gradient(135deg, #f472b6, #fb923c); }
+    .card[data-card="chopin"] { background: linear-gradient(135deg, #a78bfa, #60a5fa); }
+    .card[data-card="davinci"] { background: linear-gradient(135deg, #facc15, #fb7185); }
+    .card[data-card="abdelkader"] { background: linear-gradient(135deg, #34d399, #60a5fa); }
+    .card[data-card="marcopolo"] { background: linear-gradient(135deg, #f97316, #facc15); }
+    .card[data-card="galileo"] { background: linear-gradient(135deg, #60a5fa, #a78bfa); }
+    .card[data-card="newton"] { background: linear-gradient(135deg, #f472b6, #facc15); }
+    .card[data-card="einstein"] { background: linear-gradient(135deg, #34d399, #fb7185); }
+    .card[data-card="socrates"] { background: linear-gradient(135deg, #facc15, #60a5fa); }
+
+    .card .label { font-size: 1rem; font-weight: 500; color: #fff; text-align: center; }
+
+    .small { font-size: 0.9rem; color: #64748b; margin-top: 15px; }
+
+    footer { margin-top: 20px; color: #64748b; font-size: 0.9rem; text-align:center; }
+
+    @media (min-width:600px){ .grid{ grid-template-columns:repeat(3,1fr); } }
+    @media (min-width:900px){ #app{ max-width:900px; } }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Home button -->
+    <a href="https://feynfou.github.io/DarijaToons-Hub/" class="home-button">🏠 Home / الرئيسية</a>
+
+    <h1>DarijaToons Stories / دارجاتونز — الحكايات</h1>
+
+    <div class="grid">
+      <div class="card" data-card="mozart" data-audio="stories/mozart.mp3">
+        <div class="icon"><img src="images/mozart.png" alt="Mozart"></div>
+        <div class="label">Mozart</div>
+      </div>
+
+      <div class="card" data-card="chopin" data-audio="stories/chopin.mp3">
+        <div class="icon"><img src="images/chopin.png" alt="Chopin"></div>
+        <div class="label">Chopin</div>
+      </div>
+
+      <div class="card" data-card="davinci" data-audio="stories/davinci.mp3">
+        <div class="icon"><img src="images/davinci.png" alt="Da Vinci"></div>
+        <div class="label">Da Vinci</div>
+      </div>
+
+      <div class="card" data-card="abdelkader" data-audio="stories/abdelkader.mp3">
+        <div class="icon"><img src="images/aek.webp" alt="Emir Abdel Kader"></div>
+        <div class="label">Emir Abdel Kader</div>
+      </div>
+
+      <div class="card" data-card="marcopolo" data-audio="stories/marcopolo.mp3">
+        <div class="icon"><img src="images/marcopolo.png" alt="Marco Polo"></div>
+        <div class="label">Marco Polo</div>
+      </div>
+
+      <div class="card" data-card="galileo" data-audio="stories/galileo.mp3">
+        <div class="icon"><img src="images/galileo.png" alt="Galileo"></div>
+        <div class="label">Galileo</div>
+      </div>
+
+      <div class="card" data-card="newton" data-audio="stories/newton.mp3">
+        <div class="icon"><img src="images/newton.png" alt="Newton"></div>
+        <div class="label">Newton</div>
+      </div>
+
+      <div class="card" data-card="einstein" data-audio="stories/einstein.mp3">
+        <div class="icon"><img src="images/einstein.png" alt="Einstein"></div>
+        <div class="label">Einstein</div>
+      </div>
+
+      <div class="card" data-card="socrates" data-audio="stories/socrates.mp3">
+        <div class="icon"><img src="images/socrates.png" alt="Socrates"></div>
+        <div class="label">Socrates</div>
+      </div>
+    </div>
+
+    <div class="small">⚠️ Work in progress! ***** !صبر شوية، مزال خدامين عليه ⚠️</div>
+
+    <footer>DarijaToons • Made with ❤️ for little learners / دارجاتونز • مصنوع ب❤️ للأطفال</footer>
+  </div>
+
+  <audio id="audio-player"></audio>
+
+  <script>
+    const audioPlayer = document.getElementById('audio-player');
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const audioSrc = card.getAttribute('data-audio');
+
+        if(audioPlayer.src.endsWith(audioSrc)){
+          if(audioPlayer.paused) audioPlayer.play();
+          else audioPlayer.pause();
+        } else {
+          audioPlayer.src = audioSrc;
+          audioPlayer.play();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
